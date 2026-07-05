@@ -1,24 +1,24 @@
 [
   {
     "id": 1,
-    "name": "E-Commerce Platform",
-    "description": "A full-stack e-commerce solution with payment gateways, user authentication, and a modern shopping cart experience built using React and Node.js.",
-    "viewLink": "https://example.com/project1",
-    "githubLink": "https://github.com/akarsh/project1"
+    "name": "PortX Ai portfolio website maker by resume parsing",
+    "description": "Developed a web application that automates personal portfolio creation by parsing resumes using AI. The system extracts key details like skills, projects, and work experience, then dynamically generates a personalized portfolio website. AI-powered resume parser to extract structured data from PDF/DOCX resumes.",
+    "viewLink": "https://www.portx.live/",
+    "githubLink": "https://github.com/AkarshDileep/One-Click-AI-personal-portfolio-website-builder"
   },
   {
     "id": 2,
-    "name": "AI Content Generator",
-    "description": "A web application that leverages advanced AI models to generate high-quality blog posts and marketing copy automatically.",
-    "viewLink": "https://example.com/project2",
-    "githubLink": "https://github.com/akarsh/project2"
+    "name": "Ai powered Expense tracker mobile app",
+    "description": "Developed a cross-platform mobile application that helps users track and manage their expenses with the power of Al. The app displays detailed daily, weekly, and monthly expense breakdowns and provides smart, Al-driven suggestions to optimize spending habits and gives spending advice by analyzing spendings.",
+    "viewLink": "",
+    "githubLink": "https://github.com/AkarshDileep/ai-powered-expense-tracker"
   },
   {
     "id": 3,
-    "name": "Portfolio Dashboard",
-    "description": "An interactive dashboard for tracking crypto and stock portfolios in real-time, utilizing WebSockets and beautiful data visualizations.",
-    "viewLink": "https://example.com/project3",
-    "githubLink": "https://github.com/akarsh/project3"
+    "name": "Film review application",
+    "description": "Developed a full-stack web application for film enthusiasts to submit and view movie reviews. Users can register, log in, and share their thoughts on various films. Admins have privileges to add new movies and manage reviews.",
+    "viewLink": "https://film-review-django-2.onrender.com",
+    "githubLink": "https://github.com/AkarshDileep/film-review-django"
   },
   {
     "id": 4,
@@ -40,12 +40,5 @@
     "description": "An enterprise-grade project management tool with drag-and-drop Kanban boards, team collaboration, and automated reporting.",
     "viewLink": "https://example.com/project6",
     "githubLink": "https://github.com/akarsh/project6"
-  },
-  {
-    "id": 7,
-    "name": "Portfolio Dashboard",
-    "description": "An interactive dashboard for tracking crypto and stock portfolios in real-time, utilizing WebSockets and beautiful data visualizations.",
-    "viewLink": "https://example.com/project3",
-    "githubLink": "https://github.com/akarsh/project3"
   }
 ]
