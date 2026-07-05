@@ -1,0 +1,51 @@
+[
+  {
+    "id": 1,
+    "name": "E-Commerce Platform",
+    "description": "A full-stack e-commerce solution with payment gateways, user authentication, and a modern shopping cart experience built using React and Node.js.",
+    "viewLink": "https://example.com/project1",
+    "githubLink": "https://github.com/akarsh/project1"
+  },
+  {
+    "id": 2,
+    "name": "AI Content Generator",
+    "description": "A web application that leverages advanced AI models to generate high-quality blog posts and marketing copy automatically.",
+    "viewLink": "https://example.com/project2",
+    "githubLink": "https://github.com/akarsh/project2"
+  },
+  {
+    "id": 3,
+    "name": "Portfolio Dashboard",
+    "description": "An interactive dashboard for tracking crypto and stock portfolios in real-time, utilizing WebSockets and beautiful data visualizations.",
+    "viewLink": "https://example.com/project3",
+    "githubLink": "https://github.com/akarsh/project3"
+  },
+  {
+    "id": 4,
+    "name": "Social Connect App",
+    "description": "A mobile-first social networking platform featuring real-time messaging, photo sharing, and dynamic user profiles.",
+    "viewLink": "https://example.com/project4",
+    "githubLink": "https://github.com/akarsh/project4"
+  },
+  {
+    "id": 5,
+    "name": "Fitness Tracker Pro",
+    "description": "A comprehensive health and fitness tracking application with workout planning, macro calculations, and progress analytics.",
+    "viewLink": "https://example.com/project5",
+    "githubLink": "https://github.com/akarsh/project5"
+  },
+  {
+    "id": 6,
+    "name": "TaskMaster Workflow",
+    "description": "An enterprise-grade project management tool with drag-and-drop Kanban boards, team collaboration, and automated reporting.",
+    "viewLink": "https://example.com/project6",
+    "githubLink": "https://github.com/akarsh/project6"
+  },
+  {
+    "id": 7,
+    "name": "Portfolio Dashboard",
+    "description": "An interactive dashboard for tracking crypto and stock portfolios in real-time, utilizing WebSockets and beautiful data visualizations.",
+    "viewLink": "https://example.com/project3",
+    "githubLink": "https://github.com/akarsh/project3"
+  }
+]
