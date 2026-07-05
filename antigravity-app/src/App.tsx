@@ -1,9 +1,9 @@
 import React, { useEffect, useState, useRef } from 'react';
 import ShapeGrid from '@/components/ShapeGrid';
 import DotField from '@/components/DotField';
-import croppedImg from '../../croped (1).png';
-import dingSound from '../../iphone_ding_2second.mp3';
-import cvFile from '../../akarsh.docx';
+import croppedImg from './assets/croped (1).png';
+import dingSound from './assets/iphone_ding_2second.mp3';
+import cvFile from './assets/akarsh.docx';
 import { ChevronDown, MoreVertical, X, Github, Linkedin, Mail, Instagram } from 'lucide-react';
 import GradientText from '@/components/GradientText';
 import BorderGlow from '@/components/BorderGlow';
