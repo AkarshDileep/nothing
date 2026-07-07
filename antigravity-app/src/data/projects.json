@@ -10,7 +10,7 @@
     "id": 2,
     "name": "Ai powered Expense tracker mobile app",
     "description": "Developed a cross-platform mobile application that helps users track and manage their expenses with the power of Al. The app displays detailed daily, weekly, and monthly expense breakdowns and provides smart, Al-driven suggestions to optimize spending habits and gives spending advice by analyzing spendings.",
-    "viewLink": "",
+    "viewLink": "https://drive.google.com/file/d/1oxNgUkUddSKulHRptcRLSwVL3bQ9VgnT/view?usp=sharing",
     "githubLink": "https://github.com/AkarshDileep/ai-powered-expense-tracker"
   },
   {
@@ -22,23 +22,23 @@
   },
   {
     "id": 4,
-    "name": "Ecommerse app",
-    "description": "A mobile-first social networking platform featuring real-time messaging, photo sharing, and dynamic user profiles.",
-    "viewLink": "https://example.com/project4",
-    "githubLink": "https://github.com/akarsh/project4"
+    "name": "invoice-and-po-comparator",
+    "description": "Users can upload multiple PDF documents to view a side-by-side preview alongside a detailed breakdown highlighting specific data matches and mismatches.",
+    "viewLink": "",
+    "githubLink": "https://github.com/AkarshDileep/invoice-and-po-comparator"
   },
   {
     "id": 5,
-    "name": "Fitness Tracker Pro",
-    "description": "A comprehensive health and fitness tracking application with workout planning, macro calculations, and progress analytics.",
-    "viewLink": "https://example.com/project5",
-    "githubLink": "https://github.com/akarsh/project5"
+    "name": "Ecommerce-application-using-flask",
+    "description": "E-Commerce Web Application | Python, Flask, HTML/CSS, JSON * Built a lightweight e-commerce application using Flask and Python, rendering dynamic frontend views with HTML/CSS and managing product data via local JSON storage",
+    "viewLink": "",
+    "githubLink": "https://github.com/AkarshDileep/Ecommerce-application-using-flask"
   },
   {
     "id": 6,
-    "name": "TaskMaster Workflow",
-    "description": "An enterprise-grade project management tool with drag-and-drop Kanban boards, team collaboration, and automated reporting.",
-    "viewLink": "https://example.com/project6",
-    "githubLink": "https://github.com/akarsh/project6"
+    "name": "My website",
+    "description": "A responsive personal portfolio website designed to establish a strong professional web presence. The site features a unique high-contrast, black-and-white grid UI that highlights a central profile.",
+    "viewLink": "",
+    "githubLink": "https://github.com/AkarshDileep/nothing"
   }
 ]

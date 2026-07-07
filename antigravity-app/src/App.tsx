@@ -37,6 +37,7 @@ function App() {
   const [typedFirst, setTypedFirst] = useState('');
   const [typedLast, setTypedLast] = useState('');
   const [gridOverflow, setGridOverflow] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
 
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const gridContainerRef = useRef<HTMLDivElement>(null);
@@ -48,6 +49,7 @@ function App() {
         const overflow = Math.max(0, gridRef.current.scrollHeight - gridContainerRef.current.clientHeight);
         setGridOverflow(overflow);
       }
+      setIsMobile(window.innerWidth < 768);
     };
 
     setTimeout(handleResize, 100);
@@ -148,7 +150,8 @@ function App() {
 
   // Phase 1 Interactive animation values
   const imageOpacity = phase1Progress;
-  const imageScale = 0.8 + (phase1Progress * 0.2);
+  const baseScale = isMobile ? 1.4 : 0.8;
+  const imageScale = baseScale + (phase1Progress * 0.2);
   const imageTranslateY = 100 - (phase1Progress * 100); // 100vh to 0vh
   const indicatorOpacity = 1 - (phase1Progress * 2);
 
@@ -163,8 +166,8 @@ function App() {
   // Phase 3 & 4 Animation values (Slide image left, animate text)
   const imageTranslateX = -(phase3Progress * 25); // 0 to -25vw
 
-  const quoteTop = 50 - (phase4Progress * 25); // Starts at 50% (center), moves up to 25%
-  const aboutTop = 50 - (phase4Progress * 5); // Starts at 50%, moves slightly up to 45%
+  const quoteTop = 50 - (phase4Progress * (isMobile ? 38 : 25)); // Desktop: 50% -> 25%. Mobile: 50% -> 12%
+  const aboutTop = 50 - (phase4Progress * (isMobile ? 26 : 5)); // Desktop: 50% -> 45%. Mobile: 50% -> 24%
 
   const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -316,11 +319,15 @@ function App() {
             showBorder={false}
             className="text-6xl md:text-9xl font-extrabold tracking-wide font-stretch-extra-expande text-center font-typewriter drop-shadow-lg"
           >
-            <div className="flex items-baseline justify-center w-full">
-              <span>A</span>
-              <span>{typedFirst}</span>
-              <span>D</span>
-              <span>{typedLast}</span>
+            <div className="flex flex-col md:flex-row items-center md:items-baseline justify-center w-full md:gap-8 leading-none md:leading-normal">
+              <div className="flex items-baseline">
+                <span>A</span>
+                <span>{typedFirst}</span>
+              </div>
+              <div className="flex items-baseline">
+                <span>D</span>
+                <span>{typedLast}</span>
+              </div>
             </div>
           </GradientText>
         </div>
@@ -388,7 +395,7 @@ function App() {
         </div>
 
         <div
-          className="relative md:w-5/6  sm:w-full md:h-5/6 pointer-events-none transition-all duration-75 ease-linear flex items-end justify-center"
+          className="relative w-[160%] h-[80vh] md:w-5/6 md:h-5/6 pointer-events-none transition-all duration-75 ease-linear flex items-end justify-center origin-bottom"
           style={{
             opacity: imageOpacity * Math.max(0, 1 - phase5Progress * 1.5),
             transform: `translateY(${imageTranslateY}vh) translateX(${imageTranslateX}vw) scale(${imageScale}) translateZ(-${phase5Progress * 1000}px) rotateY(${phase5Progress * 25}deg)`
@@ -402,21 +409,21 @@ function App() {
 
           {/* Message Bubble */}
           <div
-            className={`absolute right-4 top-[15%] md:right-[22%] md:top-[22%] bg-black/80 backdrop-blur-sm px-6 py-4 rounded-3xl rounded-bl-none shadow-2xl border border-gray-100 transition-all duration-500 ease-out pointer-events-auto ${phase1Progress === 1 ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-4 scale-95'}`}
+            className={`absolute left-1/2 -translate-x-1/2 top-[46%] mt-[200px] ml-[100px] md:mt-0 md:ml-0 md:left-auto md:-translate-x-0 md:right-[22%] md:top-[22%] bg-black/80 backdrop-blur-sm px-3 py-1.5 md:px-6 md:py-4 rounded-xl md:rounded-3xl rounded-bl-none md:rounded-bl-none shadow-2xl border border-gray-100 transition-all duration-500 ease-out pointer-events-auto ${phase1Progress === 1 ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-4 scale-95'}`}
           >
             {/* Tail */}
-            <div className="absolute -bottom-2 -left-2 w-6 h-6 bg-black/80 border-b border-l border-gray-100 transform -skew-x-12 rounded-bl-md"></div>
+            <div className="absolute -bottom-1 -left-1.5 w-3 h-3 md:-bottom-2 md:-left-2 md:w-6 md:h-6 bg-black/80 border-b border-l border-gray-100 transform -skew-x-12 rounded-bl-md md:rounded-bl-md"></div>
 
-            <span className="uppercase tracking-widest text-sm font-medium text-white relative z-10 flex items-center">
+            <span className="uppercase tracking-widest text-[10px] md:text-sm font-medium text-white relative z-10 flex items-center whitespace-nowrap">
               {displayedText}
-              <span className={`w-1.5 h-4 bg-white ml-1 ${phase1Progress === 1 ? 'animate-pulse' : 'hidden'}`}></span>
+              <span className={`w-1 h-2 md:w-1.5 md:h-4 bg-white ml-1 ${phase1Progress === 1 ? 'animate-pulse' : 'hidden'}`}></span>
             </span>
           </div>
         </div>
 
         {/* Phase 3 & 4 Content: Quote and About Me */}
         <div
-          className="absolute right-0 md:right-[5%] top-0 h-screen w-full md:w-5/12 px-8 md:px-0 pointer-events-none transition-all duration-75 ease-linear"
+          className="absolute right-0 md:right-[5%] top-0 h-screen w-full md:w-5/12 pointer-events-none transition-all duration-75 ease-linear"
           style={{
             visibility: phase3Progress > 0 ? 'visible' : 'hidden',
             opacity: Math.max(0, 1 - phase5Progress * 1.5),
@@ -425,7 +432,7 @@ function App() {
         >
           {/* Quote Block */}
           <div
-            className="absolute w-full flex flex-col gap-6 transition-all duration-75 ease-linear"
+            className="absolute left-0 px-8 md:left-auto md:px-0 w-full flex flex-col gap-4 md:gap-6 transition-all duration-75 ease-linear"
             style={{
               top: `${quoteTop}%`,
               transform: 'translateY(-50%)',
@@ -440,7 +447,7 @@ function App() {
 
           {/* About Block */}
           <div
-            className="absolute w-full transition-all duration-75 ease-linear text-sm md:text-base text-gray-300 leading-relaxed font-medium"
+            className="absolute left-0 px-8 md:left-auto md:px-0 w-full transition-all duration-75 ease-linear text-sm md:text-base text-gray-300 leading-relaxed font-medium"
             style={{
               top: `${aboutTop}%`,
               opacity: phase4Progress,
