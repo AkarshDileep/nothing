@@ -40,5 +40,12 @@
     "description": "A responsive personal portfolio website designed to establish a strong professional web presence. The site features a unique high-contrast, black-and-white grid UI that highlights a central profile.",
     "viewLink": "",
     "githubLink": "https://github.com/AkarshDileep/nothing"
+  },
+  {
+    "id": 1,
+    "name": "3D Virtual Interview Platform",
+    "description": "Developed a 3D AI interview platform using React, Three.js, and Django that simulates realistic technical screening conversations with interactive avatars. The system extracts context from uploaded resumes and job descriptions via multi-LLM orchestration to dynamically generate role-tailored questions and evaluate verbal answers. Real-time Web Speech API and procedural WebGL lip-sync engine to deliver a natural, hands-free candidate experience.",
+    "viewLink": "https://vinterview.akarshdileep.me/",
+    "githubLink": "https://github.com/AkarshDileep/virtual-interview-platform"
   }
 ]
